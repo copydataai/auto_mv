@@ -2,11 +2,14 @@
 ## A project about moving files for extesions ej: .pdf, .epub,.mp3
 This project is still in development
 
-### First Clone this repository 
+First Clone this repository 
+```
   git clone https://github.com/copydataai/auto_mv.git
   cd auto_mv
   pip install . 
-  you can use with auto or aumv
-
+```
+### you can use with auto or aumv
 About more information consult 
+```
   auto --help
+```
