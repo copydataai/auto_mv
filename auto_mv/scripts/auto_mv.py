@@ -87,13 +87,12 @@ def _move(files, dir_start, dir_end):
 def create_dir(dir_end):
     """Receive exit path."""
     global FINDS
-    if path.isdir(f'{dir_end}/new_{FINDS[0]}'):
-        option = input('You want new directory? [y/N]').lower()
-        if option == 'y':
-            new_dir = input('Enter name dir: ')
-            return f'new_book/{new_dir}/'
-        return 'new_book/'
-    else:
+    if not path.isdir(f'{dir_end}/new_{FINDS[0]}'):
         paths = path.join(dir_end, 'new_' + FINDS[0])
         mkdir(paths)
         return paths
+    option = input('You want new directory? [y/N]').lower()
+    if option == 'y':
+        new_dir = input('Enter name dir: ')
+        return f'new_book/{new_dir}/'
+    return 'new_book/'
